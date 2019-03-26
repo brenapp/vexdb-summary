@@ -14,4 +14,4 @@ router.get("/ap_summary", ap_summary);
 
 app.use("/api/", router);
 
-server.listen(3000, () => console.log("Server started"));
+server.listen(80, () => console.log("Server started"));
