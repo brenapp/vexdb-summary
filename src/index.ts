@@ -1,6 +1,8 @@
 import express from "express";
 import http from "http";
 
+import morgan from "morgan";
+
 // Routes
 import { ap_summary } from "./endpoints";
 
@@ -8,6 +10,8 @@ export const app = express();
 export const server = http.createServer(app);
 
 export const router = express.Router();
+
+app.use(morgan("dev"));
 
 // Connect routes
 router.get("/ap_summary", ap_summary);
