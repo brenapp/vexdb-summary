@@ -14,7 +14,7 @@ export default async (req: Express.Request, res: Express.Response) => {
     .map(r => (r.wins + r.losses + r.ties) * 4)
     .reduce((a, b) => a + b);
 
-  ok(res, {
+  ok(req, res, {
     team,
     totalAP,
     availableAP
