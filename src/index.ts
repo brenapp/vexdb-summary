@@ -18,4 +18,4 @@ router.get("/ap_summary", ap_summary);
 
 app.use("/api/", router);
 
-server.listen(80, () => console.log("Server started"));
+server.listen(8080, () => console.log("Server started"));
